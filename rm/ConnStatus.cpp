@@ -22,7 +22,7 @@ SetConnStatus::SetConnStatus(AnsiString connString)
     OraSession1->Connect();
   }
   catch (Exception &e){
-    throw Exception("Строка связи задана неверно!");
+    throw Exception("РЎС‚СЂРѕРєР° СЃРІСЏР·Рё Р·Р°РґР°РЅР° РЅРµРІРµСЂРЅРѕ!");
   }
 }
 //---------------------------------------------------------------------------
@@ -30,7 +30,7 @@ bool SetConnStatus::SetStatus(AnsiString host, AnsiString port, AnsiString conn_
 {
   try{
     oqSetStatus->Close();
-    oqSetStatus->ParamByName("AV_SOURCE")->AsString = "Почтовый робот";
+    oqSetStatus->ParamByName("AV_SOURCE")->AsString = "РџРѕС‡С‚РѕРІС‹Р№ СЂРѕР±РѕС‚";
     oqSetStatus->ParamByName("AV_IP_ADDR")->AsString = host + ":" + port;
     oqSetStatus->ParamByName("AD_TIME_STAMP")->AsDateTime= Now();
     //oqSetStatus->ParamByName("AD_NEXT_TIME_STAMP")->AsDateTime = NULL;

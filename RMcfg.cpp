@@ -11,7 +11,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
   try
   {
      Application->Initialize();
-     Application->Title = "Конфигуратор почтового робота";
+     Application->Title = "РљРѕРЅС„РёРіСѓСЂР°С‚РѕСЂ РїРѕС‡С‚РѕРІРѕРіРѕ СЂРѕР±РѕС‚Р°";
      Application->CreateForm(__classid(TfmMain), &fmMain);
      Application->Run();
   }

@@ -27,8 +27,8 @@ protected:
         AnsiString FDestinDir;
         AnsiString FCreateDir;
         AnsiString FSaveBodyToFile;
-        AnsiString FArchStr;    // Путь к архиватору и параметры запуска
-        AnsiString FArchExtensions; // Расширения файлов которые тужно распаковывать
+        AnsiString FArchStr;    // РџСѓС‚СЊ Рє Р°СЂС…РёРІР°С‚РѕСЂСѓ Рё РїР°СЂР°РјРµС‚СЂС‹ Р·Р°РїСѓСЃРєР°
+        AnsiString FArchExtensions; // Р Р°СЃС€РёСЂРµРЅРёСЏ С„Р°Р№Р»РѕРІ РєРѕС‚РѕСЂС‹Рµ С‚СѓР¶РЅРѕ СЂР°СЃРїР°РєРѕРІС‹РІР°С‚СЊ
 //      [Messages]
         AnsiString FReportLevel;
         TStringList *tmpFilesName;

@@ -42,7 +42,7 @@ bool __fastcall TMailThread::POP3Connect(const TPOP3_Connect* POP3_Connect)
                     POP3_ReadMail->Port = POP3_Connect->Port;
                     POP3_ReadMail->Username = POP3_Connect->UserID;
                     POP3_ReadMail->Password = POP3_Connect->Password;
-                    WriteFullMessage("Соединение с POP3 сервером");
+                    WriteFullMessage("РЎРѕРµРґРёРЅРµРЅРёРµ СЃ POP3 СЃРµСЂРІРµСЂРѕРј");
                     POP3_ReadMail->Connect();
                     ConnectedComplete = POP3_ReadMail->Connected();
             }catch(Exception &E){
@@ -64,13 +64,13 @@ bool __fastcall TMailThread::POP3Connect(const TPOP3_Connect* POP3_Connect)
        SetConnStatus* conn_status = new SetConnStatus(FDBName);
        bool set_res;
        if (ConnectedComplete)
-          set_res = conn_status->SetStatus(POP3_Connect->Host, POP3_Connect->Port, "Штатная работа.", 1);
+          set_res = conn_status->SetStatus(POP3_Connect->Host, POP3_Connect->Port, "РЁС‚Р°С‚РЅР°СЏ СЂР°Р±РѕС‚Р°.", 1);
        else
           set_res = conn_status->SetStatus(POP3_Connect->Host, POP3_Connect->Port, errConnect, 3);
        if (conn_status)
          delete conn_status;
        if (!set_res)
-         WriteFullMessage("Не удалось записать состояние соединения с POP3");
+         WriteFullMessage("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РїРёСЃР°С‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ POP3");
      }
    }catch(Exception &E){
     WriteMessage("TMailThread::POP3ConnectStatus: "+E.Message);
@@ -82,12 +82,12 @@ bool __fastcall TMailThread::POP3Disconnect()
 {
   try{
     if(POP3_ReadMail->Connected()){
-      WriteFullMessage("Отсоединение от POP3 сервера_1");
-      POP3_ReadMail->WriteLn("QUIT"); //Нужно для очень быстрых машин
+      WriteFullMessage("РћС‚СЃРѕРµРґРёРЅРµРЅРёРµ РѕС‚ POP3 СЃРµСЂРІРµСЂР°_1");
+      POP3_ReadMail->WriteLn("QUIT"); //РќСѓР¶РЅРѕ РґР»СЏ РѕС‡РµРЅСЊ Р±С‹СЃС‚СЂС‹С… РјР°С€РёРЅ
       ::Sleep(1000);
     }
     if(POP3_ReadMail->Connected()){
-      WriteFullMessage("Отсоединение от POP3 сервера_2");
+      WriteFullMessage("РћС‚СЃРѕРµРґРёРЅРµРЅРёРµ РѕС‚ POP3 СЃРµСЂРІРµСЂР°_2");
       POP3_ReadMail->Disconnect();
     }
     if(POP3_ReadMail)
@@ -141,8 +141,8 @@ bool __fastcall TMailThread::GetFilesName(AnsiString aDir, AnsiString Mask, Ansi
   TSearchRec F;
   try{
      tmpFilesName->Clear();
-     WriteFullMessage("Чтение файлов с директории "+aDir);
-     if(!DirectoryExists(aDir)) WriteMessage("Не найдена директория "+aDir);
+     WriteFullMessage("Р§С‚РµРЅРёРµ С„Р°Р№Р»РѕРІ СЃ РґРёСЂРµРєС‚РѕСЂРёРё "+aDir);
+     if(!DirectoryExists(aDir)) WriteMessage("РќРµ РЅР°Р№РґРµРЅР° РґРёСЂРµРєС‚РѕСЂРёСЏ "+aDir);
      else
      {
            if(FindFirst(aDir+Mask, faAnyFile, F)==0)
@@ -157,16 +157,16 @@ bool __fastcall TMailThread::GetFilesName(AnsiString aDir, AnsiString Mask, Ansi
            tmpFilesName->Sorted = true;
            if(tmpFilesName->Count<1)
            {
-              WriteFullMessage("Нет файлов");
+              WriteFullMessage("РќРµС‚ С„Р°Р№Р»РѕРІ");
            }
            else
-              WriteFullMessage("Найдено файлов: "+IntToStr(tmpFilesName->Count));
+              WriteFullMessage("РќР°Р№РґРµРЅРѕ С„Р°Р№Р»РѕРІ: "+IntToStr(tmpFilesName->Count));
      }
      return (tmpFilesName->Count>0);
   }
   catch(Exception& E)
   {
-        WriteMessage("Ошибка чтения файлов: "+E.Message);
+        WriteMessage("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»РѕРІ: "+E.Message);
         return false;
   }
 }

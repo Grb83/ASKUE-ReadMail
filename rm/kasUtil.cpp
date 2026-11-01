@@ -11,7 +11,7 @@
 #pragma package(smart_init)
 
 //---------------------------------------------------------------------------
-// Таблица перекодировки Win-1251 в KOI8R
+// РўР°Р±Р»РёС†Р° РїРµСЂРµРєРѕРґРёСЂРѕРІРєРё Win-1251 РІ KOI8R
   char WinKoi8r_Table[] = {128,129,130,131,132,133,134,135,136,137,60,139,140,141,142,
                            143,144,145,146,147,148,169,150,151,152,153,154,62,176,157,
                            183,159,160,246,247,74,164,231,166,167,179,169,180,60,172,
@@ -22,7 +22,7 @@
                            202,203,204,205,206,207,208,210,211,212,213,198,200,195,222,
                            219,221,223,217,216,220,192,209};
 
-// Таблица перекодировки KOI8R в Win-1251
+// РўР°Р±Р»РёС†Р° РїРµСЂРµРєРѕРґРёСЂРѕРІРєРё KOI8R РІ Win-1251
   char Koi8rWin_Table[] = {128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,
                            143,144,145,146,147,148,149,150,151,152,153,218,155,176,157,
                            183,159,160,161,162,184,186,165,166,191,168,169,170,171,172,
@@ -53,7 +53,7 @@ bool __fastcall CompareVer(AnsiString aUpdatePath)
      }
      __finally
      {
-//         if(lpBufferThis) delete lpBufferThis;      В Win98 вызывает ошибку
+//         if(lpBufferThis) delete lpBufferThis;      Р’ Win98 РІС‹Р·С‹РІР°РµС‚ РѕС€РёР±РєСѓ
 //         if(lpBuffer) delete lpBuffer;
          if(lpDataThis) delete[] lpDataThis;
          if(lpData) delete[] lpData;
@@ -75,7 +75,7 @@ AnsiString __fastcall GetVerText()
      GetFileVersionInfo(Application->ExeName.c_str(),NULL,dThis,lpDataThis);
      VerQueryValue(lpDataThis,"\\",(void**)&lpBufferThis,&zz);
 
-     s = "Версия "+IntToStr(HIWORD(lpBufferThis-> dwFileVersionMS))+"."+IntToStr(LOWORD(lpBufferThis->dwFileVersionMS))+"."+
+     s = "Р’РµСЂСЃРёСЏ "+IntToStr(HIWORD(lpBufferThis-> dwFileVersionMS))+"."+IntToStr(LOWORD(lpBufferThis->dwFileVersionMS))+"."+
               IntToStr(HIWORD(lpBufferThis->dwFileVersionLS))+"."+IntToStr(LOWORD(lpBufferThis->dwFileVersionLS));
      delete[] lpDataThis;
      return s;
@@ -117,7 +117,7 @@ void __fastcall TextSeparate(AnsiString aSourceString, AnsiString aSeparator, TS
 TDateTime Str_To_DateTime(AnsiString aStrDateTime, AnsiString aFormat)
 {
     if(aStrDateTime.Length()!=aFormat.Length())
-       throw EConvertError("Неверный формат даты.");
+       throw EConvertError("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°С‚С‹.");
     char OldDateSeparator = DateSeparator, OldTimeSeparator = TimeSeparator;
     AnsiString OldShortDateFormat = ShortDateFormat,
                OldShortTimeFormat = ShortTimeFormat,
@@ -173,7 +173,7 @@ TDateTime Str_To_DateTime(AnsiString aStrDateTime, AnsiString aFormat)
           }
           catch(EConvertError &e)
           {
-                throw EConvertError(NewStrDateTime+" Неправильный формат даты.");
+                throw EConvertError(NewStrDateTime+" РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°С‚С‹.");
           }
     }
     __finally
@@ -283,7 +283,7 @@ AnsiString Win1251ToOEM(AnsiString aValue)
        char *dest = new char[aValue.Length()+1];
        ZeroMemory(dest,aValue.Length()+1);
     if(!CharToOemBuff(aValue.c_str(),dest,aValue.Length()))
-       throw Exception("Ошибка при конвертации в OEM");
+       throw Exception("РћС€РёР±РєР° РїСЂРё РєРѕРЅРІРµСЂС‚Р°С†РёРё РІ OEM");
     res = dest;
     return res;
 }
@@ -294,7 +294,7 @@ AnsiString OEMToWin1251(AnsiString aValue)
        char *dest = new char[aValue.Length()+1];
        ZeroMemory(dest,aValue.Length()+1);
     if(!OemToCharBuff(aValue.c_str(),dest,aValue.Length()))
-       throw Exception("Ошибка при конвертации в Win1251");
+       throw Exception("РћС€РёР±РєР° РїСЂРё РєРѕРЅРІРµСЂС‚Р°С†РёРё РІ Win1251");
     res = dest;
     return res;
 }
@@ -311,7 +311,7 @@ AnsiString ReplaceSubStr(AnsiString aSourse, AnsiString aOldSubSrt, AnsiString a
     for(int i=0; i<SepStrings->Count; i++)
        res = res+SepStrings->Strings[i]+(i<SepStrings->Count-1 ? aNewSubSrt:AnsiString(""));
     if(SepStrings) delete SepStrings;
-    if(OldEntry>Str_EntryCount_toStr(res, aNewSubSrt)-NewEntry) // Учтем последнее вхождение которое не учли при сепарации
+    if(OldEntry>Str_EntryCount_toStr(res, aNewSubSrt)-NewEntry) // РЈС‡С‚РµРј РїРѕСЃР»РµРґРЅРµРµ РІС…РѕР¶РґРµРЅРёРµ РєРѕС‚РѕСЂРѕРµ РЅРµ СѓС‡Р»Рё РїСЂРё СЃРµРїР°СЂР°С†РёРё
         res = res+aNewSubSrt;
     return res;
 }

@@ -1,0 +1,7 @@
+*.cpp text working-tree-encoding=CP1251
+*.c text working-tree-encoding=CP1251
+*.hpp text working-tree-encoding=CP1251
+*.h text working-tree-encoding=CP1251
+*.sql text working-tree-encoding=CP1251
+*.pas text working-tree-encoding=CP1251
+*.dfm binary

@@ -28,7 +28,7 @@ void __fastcall TfmAbout::Image1Click(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TfmAbout::FormCreate(TObject *Sender)
 {
-  lbVersion->Caption="Âåðñèÿ "+GetFileVerInfo(Application->ExeName).vver;
+  lbVersion->Caption="Ð’ÐµÑ€ÑÐ¸Ñ "+GetFileVerInfo(Application->ExeName).vver;
 }
 //---------------------------------------------------------------------------
 

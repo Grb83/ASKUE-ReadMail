@@ -24,44 +24,44 @@ void __fastcall TfmMain::FormCreate(TObject *Sender)
 {
  StringGrid1->ColWidths[0] = 200;
  StringGrid1->ColWidths[1] = 400;
- StringGrid1->Cells[0][0] = "Наименование";
- StringGrid1->Cells[1][0] = "Значение";
+ StringGrid1->Cells[0][0] = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ";
+ StringGrid1->Cells[1][0] = "Р—РЅР°С‡РµРЅРёРµ";
 
- Dict.insert(String_Pair("RMConfig","Конфигурация почтового робота"));
- Dict.insert(String_Pair("Service","Сервис"));
- Dict.insert(String_Pair("ServiceName","Имя сервиса"));
- Dict.insert(String_Pair("DisplayName","Имя для отображения"));
- Dict.insert(String_Pair("Connect","Соединение"));
- Dict.insert(String_Pair("ReconnectDelay","Задержка повторной связи (сек)"));
- Dict.insert(String_Pair("ConnectAttemptCount","Количество попыток связи"));
- Dict.insert(String_Pair("DBName","Имя БД <user/pass@db>"));
- Dict.insert(String_Pair("File","Файл"));
- Dict.insert(String_Pair("SourceScanInterval","Интервал сканирования (сек)"));
- Dict.insert(String_Pair("SaveBodyToFile","Сохранять текст сообщения"));
- Dict.insert(String_Pair("ArchExtensions","Расширения архивных файлов"));
- Dict.insert(String_Pair("ArchStr","Строка запуска архиватора"));
- Dict.insert(String_Pair("Paths","Пути"));
- Dict.insert(String_Pair("Default","Путь по умолчанию"));
- Dict.insert(String_Pair("Path","Путь"));
- Dict.insert(String_Pair("Caption","Описание"));
- Dict.insert(String_Pair("Subject","Тема сообщения"));
- Dict.insert(String_Pair("AddressSmall","Короткий адрес"));
- Dict.insert(String_Pair("AddressFull","Полный адрес"));
- Dict.insert(String_Pair("ExecApp","Запускаемое приложение"));
- Dict.insert(String_Pair("POP3Connects","POP3 соединения"));
- Dict.insert(String_Pair("POP3Connect","POP3 соединение"));
- Dict.insert(String_Pair("Host","Адрес сервер"));
- Dict.insert(String_Pair("Port","Порт"));
- Dict.insert(String_Pair("UserID","Пользователь"));
- Dict.insert(String_Pair("Password","Пароль"));
- Dict.insert(String_Pair("Messages","Журнал сообщений"));
- Dict.insert(String_Pair("WriteMessage","Вести журнал"));
- Dict.insert(String_Pair("LogFileName","Имя файла журнала"));
- Dict.insert(String_Pair("ReportLevel","Уровень журнала"));
- Dict.insert(String_Pair("EventFileName","Журнал событий"));
- Dict.insert(String_Pair("SaveOriginalMessage","Сохранять письма в исходном виде"));
- Dict.insert(String_Pair("SaveOriginal","Сохранять"));
- Dict.insert(String_Pair("SaveOriginalPath","Каталог"));
+ Dict.insert(String_Pair("RMConfig","РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РїРѕС‡С‚РѕРІРѕРіРѕ СЂРѕР±РѕС‚Р°"));
+ Dict.insert(String_Pair("Service","РЎРµСЂРІРёСЃ"));
+ Dict.insert(String_Pair("ServiceName","РРјСЏ СЃРµСЂРІРёСЃР°"));
+ Dict.insert(String_Pair("DisplayName","РРјСЏ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ"));
+ Dict.insert(String_Pair("Connect","РЎРѕРµРґРёРЅРµРЅРёРµ"));
+ Dict.insert(String_Pair("ReconnectDelay","Р—Р°РґРµСЂР¶РєР° РїРѕРІС‚РѕСЂРЅРѕР№ СЃРІСЏР·Рё (СЃРµРє)"));
+ Dict.insert(String_Pair("ConnectAttemptCount","РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРїС‹С‚РѕРє СЃРІСЏР·Рё"));
+ Dict.insert(String_Pair("DBName","РРјСЏ Р‘Р” <user/pass@db>"));
+ Dict.insert(String_Pair("File","Р¤Р°Р№Р»"));
+ Dict.insert(String_Pair("SourceScanInterval","РРЅС‚РµСЂРІР°Р» СЃРєР°РЅРёСЂРѕРІР°РЅРёСЏ (СЃРµРє)"));
+ Dict.insert(String_Pair("SaveBodyToFile","РЎРѕС…СЂР°РЅСЏС‚СЊ С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ"));
+ Dict.insert(String_Pair("ArchExtensions","Р Р°СЃС€РёСЂРµРЅРёСЏ Р°СЂС…РёРІРЅС‹С… С„Р°Р№Р»РѕРІ"));
+ Dict.insert(String_Pair("ArchStr","РЎС‚СЂРѕРєР° Р·Р°РїСѓСЃРєР° Р°СЂС…РёРІР°С‚РѕСЂР°"));
+ Dict.insert(String_Pair("Paths","РџСѓС‚Рё"));
+ Dict.insert(String_Pair("Default","РџСѓС‚СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ"));
+ Dict.insert(String_Pair("Path","РџСѓС‚СЊ"));
+ Dict.insert(String_Pair("Caption","РћРїРёСЃР°РЅРёРµ"));
+ Dict.insert(String_Pair("Subject","РўРµРјР° СЃРѕРѕР±С‰РµРЅРёСЏ"));
+ Dict.insert(String_Pair("AddressSmall","РљРѕСЂРѕС‚РєРёР№ Р°РґСЂРµСЃ"));
+ Dict.insert(String_Pair("AddressFull","РџРѕР»РЅС‹Р№ Р°РґСЂРµСЃ"));
+ Dict.insert(String_Pair("ExecApp","Р—Р°РїСѓСЃРєР°РµРјРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ"));
+ Dict.insert(String_Pair("POP3Connects","POP3 СЃРѕРµРґРёРЅРµРЅРёСЏ"));
+ Dict.insert(String_Pair("POP3Connect","POP3 СЃРѕРµРґРёРЅРµРЅРёРµ"));
+ Dict.insert(String_Pair("Host","РђРґСЂРµСЃ СЃРµСЂРІРµСЂ"));
+ Dict.insert(String_Pair("Port","РџРѕСЂС‚"));
+ Dict.insert(String_Pair("UserID","РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ"));
+ Dict.insert(String_Pair("Password","РџР°СЂРѕР»СЊ"));
+ Dict.insert(String_Pair("Messages","Р–СѓСЂРЅР°Р» СЃРѕРѕР±С‰РµРЅРёР№"));
+ Dict.insert(String_Pair("WriteMessage","Р’РµСЃС‚Рё Р¶СѓСЂРЅР°Р»"));
+ Dict.insert(String_Pair("LogFileName","РРјСЏ С„Р°Р№Р»Р° Р¶СѓСЂРЅР°Р»Р°"));
+ Dict.insert(String_Pair("ReportLevel","РЈСЂРѕРІРµРЅСЊ Р¶СѓСЂРЅР°Р»Р°"));
+ Dict.insert(String_Pair("EventFileName","Р–СѓСЂРЅР°Р» СЃРѕР±С‹С‚РёР№"));
+ Dict.insert(String_Pair("SaveOriginalMessage","РЎРѕС…СЂР°РЅСЏС‚СЊ РїРёСЃСЊРјР° РІ РёСЃС…РѕРґРЅРѕРј РІРёРґРµ"));
+ Dict.insert(String_Pair("SaveOriginal","РЎРѕС…СЂР°РЅСЏС‚СЊ"));
+ Dict.insert(String_Pair("SaveOriginalPath","РљР°С‚Р°Р»РѕРі"));
 
  SetEnabledAc();
  if (ParamCount() > 0) FName = ParamStr(0);
@@ -152,7 +152,7 @@ void __fastcall TfmMain::LoadFile()
   XMLDocument1->FileName = FName;
   XMLDocument1->Active = true;
   if(AnsiString(XMLDocument1->DocumentElement->GetLocalName()) != "RMConfig"){
-    throw Exception("Данный файл не является файлом конфигурации почтового робота");
+    throw Exception("Р”Р°РЅРЅС‹Р№ С„Р°Р№Р» РЅРµ СЏРІР»СЏРµС‚СЃСЏ С„Р°Р№Р»РѕРј РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїРѕС‡С‚РѕРІРѕРіРѕ СЂРѕР±РѕС‚Р°");
   }
   Modified = false;
 }
@@ -173,7 +173,7 @@ void __fastcall TfmMain::CreateTemplet()
 
   Node = RootNode->AddChild("Service");
   Node->SetAttribute("ServiceName",AnsiString("RM"));
-  Node->SetAttribute("DisplayName",AnsiString("Чтение почты"));
+  Node->SetAttribute("DisplayName",AnsiString("Р§С‚РµРЅРёРµ РїРѕС‡С‚С‹"));
 
   Node = RootNode->AddChild("Connect");
   Node->SetAttribute("ReconnectDelay",10);
@@ -225,7 +225,7 @@ void __fastcall TfmMain::TreeView1Change(TObject *Sender, TTreeNode *Node)
      else{
         StringGrid1->Cells[1][i+1] =   XMLNode->GetAttribute(EnglNodeName);
         /*if (EnglNodeName=="DBname")
-          ShowMessage("задан параметр 'Имя БД'");*/
+          ShowMessage("Р·Р°РґР°РЅ РїР°СЂР°РјРµС‚СЂ 'РРјСЏ Р‘Р”'");*/
      }
 
   }
@@ -254,7 +254,7 @@ IXMLNode* __fastcall TfmMain::AddPathNode(IXMLNode* Parent)
 {
   IXMLNode* SubNode;
   SubNode = Parent->AddChild("Path",0);
-  SubNode->SetAttribute("Caption",AnsiString("Путь 1"));
+  SubNode->SetAttribute("Caption",AnsiString("РџСѓС‚СЊ 1"));
   SubNode->SetAttribute("Subject",AnsiString("*"));
   SubNode->SetAttribute("AddressSmall",AnsiString("*"));
   SubNode->SetAttribute("AddressFull",AnsiString("*"));
@@ -317,7 +317,7 @@ void __fastcall TfmMain::TreeView1MouseUp(TObject *Sender,
 void __fastcall TfmMain::FormCloseQuery(TObject *Sender, bool &CanClose)
 {
   if (!Modified) return;
-  int res = MessageDlg("Файл был изменен. Сохранить изменения?",
+  int res = MessageDlg("Р¤Р°Р№Р» Р±С‹Р» РёР·РјРµРЅРµРЅ. РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ?",
             mtConfirmation, TMsgDlgButtons() << mbYes	<< mbNo << mbCancel	, 0);
   switch(res)
   {

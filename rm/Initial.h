@@ -52,8 +52,8 @@ protected:
 //      [File]
         long FSourceScanInterval;
         AnsiString FSaveBodyToFile;
-        AnsiString FArchStr;    // Путь к архиватору и параметры затуска
-        AnsiString FArchExtensions; // Расширения файлов которые тужно распаковывать
+        AnsiString FArchStr;    // РџСѓС‚СЊ Рє Р°СЂС…РёРІР°С‚РѕСЂСѓ Рё РїР°СЂР°РјРµС‚СЂС‹ Р·Р°С‚СѓСЃРєР°
+        AnsiString FArchExtensions; // Р Р°СЃС€РёСЂРµРЅРёСЏ С„Р°Р№Р»РѕРІ РєРѕС‚РѕСЂС‹Рµ С‚СѓР¶РЅРѕ СЂР°СЃРїР°РєРѕРІС‹РІР°С‚СЊ
 //      [Paths]
         AnsiString FDestinDir;
         AnsiString FCmdLine;
@@ -67,8 +67,8 @@ protected:
         bool FSaveOriginal;
         AnsiString FSaveOriginalPath;
 public:
-        virtual bool __fastcall Read_ini();// Читает параметры из xml файла
-//     [POP3 Connectі]
+        virtual bool __fastcall Read_ini();// Р§РёС‚Р°РµС‚ РїР°СЂР°РјРµС‚СЂС‹ РёР· xml С„Р°Р№Р»Р°
+//     [POP3 ConnectС–]
         TPOP3_ConnectsList POP3_Connects;
 //     [Service]
         __property AnsiString ServiceName = { read= FServiceName};

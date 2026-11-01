@@ -28,7 +28,7 @@ void __fastcall TfmMain::FormCreate(TObject *Sender)
     Initial = new TInitial();
     if(Initial->Read_ini())
     {
-        Initial->WriteFullMessage("Èíèöèàëèçàöèÿ ôóíêöèè ÷òåíèÿ ïî÷òû");
+        Initial->WriteFullMessage("Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð¿Ð¾Ñ‡Ñ‚Ñ‹");
 	ThreadExit=false;
 	ReadThread=new TReadThread(true);
 	ReadThread->OnTerminate=SendingThreadTerminate;
@@ -41,7 +41,7 @@ void __fastcall TfmMain::FormCreate(TObject *Sender)
 
 void __fastcall TfmMain::SendingThreadTerminate(System::TObject* Sender)
 {
-  Initial->WriteMessage("Îñòàíîâ ôóíêöèè ÷òåíèÿ ïî÷òû",0);
+  Initial->WriteMessage("ÐžÑÑ‚Ð°Ð½Ð¾Ð² Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð¿Ð¾Ñ‡Ñ‚Ñ‹",0);
 	ThreadExit=true;
   ReadThread->~TReadThread();
 	Close();

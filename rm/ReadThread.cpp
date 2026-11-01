@@ -70,13 +70,13 @@ void __fastcall TReadThread::Execute()
         }
       }
   }catch(Exception &E){
-    WriteMessage("Ошибка запуска нити чтения почты: "+E.Message);
+    WriteMessage("РћС€РёР±РєР° Р·Р°РїСѓСЃРєР° РЅРёС‚Рё С‡С‚РµРЅРёСЏ РїРѕС‡С‚С‹: "+E.Message);
   }
   CoUninitialize();
 }
 //---------------------------------------------------------------------------
-//сравнение строк, аналогично работе ф-ции like БД
-//ищет строку 2 в сторке 1
+//СЃСЂР°РІРЅРµРЅРёРµ СЃС‚СЂРѕРє, Р°РЅР°Р»РѕРіРёС‡РЅРѕ СЂР°Р±РѕС‚Рµ С„-С†РёРё like Р‘Р”
+//РёС‰РµС‚ СЃС‚СЂРѕРєСѓ 2 РІ СЃС‚РѕСЂРєРµ 1
 bool Like(AnsiString aMailStr, AnsiString aMaskStr)
 {
   if(aMaskStr.Trim()=="*")
@@ -147,7 +147,7 @@ AnsiString __fastcall TReadThread::GetDestDir(AnsiString AddressSmall, AnsiStrin
       }
     }
   }catch (Exception &E){
-    WriteMessage("Ошибка выбора целевого каталога: "+E.Message);
+    WriteMessage("РћС€РёР±РєР° РІС‹Р±РѕСЂР° С†РµР»РµРІРѕРіРѕ РєР°С‚Р°Р»РѕРіР°: "+E.Message);
   }
   return (s.LastDelimiter("\\")==s.Length())?s:s+"\\";
 }
@@ -166,71 +166,71 @@ bool __fastcall TReadThread::GetMail()
   AnsiString AddressSmall, AddressFull, Subject;
   AnsiString tmpFname=ExtractFilePath(Application->ExeName)+"Att.tmp";
   try{
-    WriteFullMessage("+++ Чтение почты с почтового сервера");
+    WriteFullMessage("+++ Р§С‚РµРЅРёРµ РїРѕС‡С‚С‹ СЃ РїРѕС‡С‚РѕРІРѕРіРѕ СЃРµСЂРІРµСЂР°");
     MsgCount = POP3_ReadMail->CheckMessages();
     for(int i=1; !Terminated && POP3_ReadMail->Connected() && i<=MsgCount; i++){
       try{
         ::Sleep(20);
         FIdMsg->Clear();
         MsgBody->Clear();
-        WriteFullMessage("Чтение письма №"+IntToStr(i));
+        WriteFullMessage("Р§С‚РµРЅРёРµ РїРёСЃСЊРјР° в„–"+IntToStr(i));
         errstrl->Clear();
         POP3_ReadMail->RetrieveRaw(i,errstrl);
         errstrl->SaveToFile(tmpFname);
         if(Initial->SaveOriginal){
          FileDTName = "m"+TDateTime::CurrentDateTime().FormatString("yymmddhhnnsszzz")+".msg";
          DestDir=Initial->SaveOriginalPath;
-         WriteFullMessage("Сохранение оригинала письма в файл: "+DestDir+FileDTName);
+         WriteFullMessage("РЎРѕС…СЂР°РЅРµРЅРёРµ РѕСЂРёРіРёРЅР°Р»Р° РїРёСЃСЊРјР° РІ С„Р°Р№Р»: "+DestDir+FileDTName);
          if(!DirectoryExists(DestDir)&&!ForceDirectories(DestDir))
-            throw Exception("Невозможно создать каталог "+DestDir);
+            throw Exception("РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ РєР°С‚Р°Р»РѕРі "+DestDir);
          errstrl->SaveToFile(DestDir+FileDTName);
         }
         FIdMsg->LoadFromFile(tmpFname,false);
         AddressFull = FIdMsg->From->Address;
-        WriteFullMessage("Прочитано сообщения от "+AddressFull);
+        WriteFullMessage("РџСЂРѕС‡РёС‚Р°РЅРѕ СЃРѕРѕР±С‰РµРЅРёСЏ РѕС‚ "+AddressFull);
         AddressSmall = AddressFull.SubString(1,AddressFull.Pos("@")-1);
         Subject =  ConvertStr(FIdMsg->Subject).Trim();
         DestDir = GetDestDir(AddressSmall,AddressFull,Subject,CmdLine);
         CurrMsgAttCount = 0;
-        WriteEventMessage("Письмо от: "+AddressFull+". Тема: "+Subject);
+        WriteEventMessage("РџРёСЃСЊРјРѕ РѕС‚: "+AddressFull+". РўРµРјР°: "+Subject);
         if(FIdMsg->MessageParts->Count){
           for(int j=0;j<FIdMsg->MessageParts->Count; j++){
             if(dynamic_cast<TIdAttachment*>(FIdMsg->MessageParts->Items[j])){
               if(!DirectoryExists(DestDir)&&!ForceDirectories(DestDir))
-                throw Exception("Невозможно создать каталог "+DestDir);
+                throw Exception("РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ РєР°С‚Р°Р»РѕРі "+DestDir);
               TIdAttachment *IdA = ((TIdAttachment*)FIdMsg->MessageParts->Items[j]);
               if(IdA->ContentTransfer.LowerCase()=="uuencode"||IdA->ContentTransfer.LowerCase()=="x-uue"){
-                WriteFullMessage("Сохранение пристежки во временный файл "+tmpFname);
+                WriteFullMessage("РЎРѕС…СЂР°РЅРµРЅРёРµ РїСЂРёСЃС‚РµР¶РєРё РІРѕ РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» "+tmpFname);
                 DeleteFile(tmpFname);
                 IdA->SaveToFile(tmpFname);
-                WriteFullMessage("Раскодирование временного файла "+tmpFname);
+                WriteFullMessage("Р Р°СЃРєРѕРґРёСЂРѕРІР°РЅРёРµ РІСЂРµРјРµРЅРЅРѕРіРѕ С„Р°Р№Р»Р° "+tmpFname);
                 MsgAtt->LoadFromFile(tmpFname);
                 MsgAtt->Text = UUEncodeToWin1251(MsgAtt->Text);
                 FileDTName = GetFName(IdA->FileName);
-                WriteFullMessage("1_Сохранение данных файл: "+DestDir+FileDTName);
+                WriteFullMessage("1_РЎРѕС…СЂР°РЅРµРЅРёРµ РґР°РЅРЅС‹С… С„Р°Р№Р»: "+DestDir+FileDTName);
                 MsgAtt->SaveToFile(DestDir+FileDTName);
                 if(CmdLine != "")
                   ExecApp(CmdLine,DestDir+FileDTName);
               }else{
                 FileDTName = GetFName(IdA->FileName);
-                WriteFullMessage("2_Сохранение данных файл: "+DestDir+FileDTName);
+                WriteFullMessage("2_РЎРѕС…СЂР°РЅРµРЅРёРµ РґР°РЅРЅС‹С… С„Р°Р№Р»: "+DestDir+FileDTName);
                 if(FileExists(DestDir+FileDTName)){
                   for(int z=0;z<10;z++){
                     if(!FileExists(DestDir+"a"+IntToStr(z)+"_"+FileDTName)){
                       FileDTName="a"+IntToStr(z)+"_"+FileDTName;
-                      WriteFullMessage("2_Выбор нового имени файла: "+DestDir+FileDTName);
+                      WriteFullMessage("2_Р’С‹Р±РѕСЂ РЅРѕРІРѕРіРѕ РёРјРµРЅРё С„Р°Р№Р»Р°: "+DestDir+FileDTName);
                       break;
                     }
                   }
                 }
                 if(DeleteFile(DestDir+FileDTName))
-                  WriteFullMessage("2_Удален предыдущий файл: "+DestDir+FileDTName);
+                  WriteFullMessage("2_РЈРґР°Р»РµРЅ РїСЂРµРґС‹РґСѓС‰РёР№ С„Р°Р№Р»: "+DestDir+FileDTName);
 
                 IdA->SaveToFile(DestDir+FileDTName);
                 if(FArchExtensions.LowerCase().Pos(ExtractFileExt(FileDTName).LowerCase())>0&&UnpackFile(DestDir+FileDTName)){
-                  WriteFullMessage("Удаление архивного файла "+DestDir+FileDTName);
+                  WriteFullMessage("РЈРґР°Р»РµРЅРёРµ Р°СЂС…РёРІРЅРѕРіРѕ С„Р°Р№Р»Р° "+DestDir+FileDTName);
                   if(!DeleteFile(DestDir+FileDTName))
-                    WriteMessage("Ошибка при удалении архивного файла "+DestDir+FileDTName,0);
+                    WriteMessage("РћС€РёР±РєР° РїСЂРё СѓРґР°Р»РµРЅРёРё Р°СЂС…РёРІРЅРѕРіРѕ С„Р°Р№Р»Р° "+DestDir+FileDTName,0);
                 }
               }
               FileCount++;
@@ -287,28 +287,28 @@ bool __fastcall TReadThread::GetMail()
         if(FSaveBodyToFile=="yes"&&CurrMsgAttCount==0){
           if(!MsgBody->Text.IsEmpty()){
             if(!DirectoryExists(DestDir)&&!ForceDirectories(DestDir))
-              throw Exception("Невозможно создать каталог "+DestDir);
+              throw Exception("РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ РєР°С‚Р°Р»РѕРі "+DestDir);
             FileDTName = GetFName("");
-            WriteFullMessage("3_Сохранение данных файл: "+DestDir+FileDTName);
+            WriteFullMessage("3_РЎРѕС…СЂР°РЅРµРЅРёРµ РґР°РЅРЅС‹С… С„Р°Р№Р»: "+DestDir+FileDTName);
             MsgBody->SaveToFile(DestDir+FileDTName);
             if(CmdLine != "")
               ExecApp(CmdLine,DestDir+FileDTName);
           }else{
-            WriteFullMessage("Принятое сообщение не содержит данных");
+            WriteFullMessage("РџСЂРёРЅСЏС‚РѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РЅРµ СЃРѕРґРµСЂР¶РёС‚ РґР°РЅРЅС‹С…");
           }
         }
-        WriteFullMessage("Удаление письма №"+IntToStr(i));
+        WriteFullMessage("РЈРґР°Р»РµРЅРёРµ РїРёСЃСЊРјР° в„–"+IntToStr(i));
         POP3_ReadMail->Delete(i);
       }catch(Exception& E){
         WriteMessage("!!! GetMail_1: "+E.Message);
         try{
           DestDir = ExtractFilePath(Application->ExeName)+"ErrMailBox\\";
           if(!DirectoryExists(DestDir)&&!ForceDirectories(DestDir))
-            throw Exception("Невозможно создать каталог "+DestDir);
+            throw Exception("РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ РєР°С‚Р°Р»РѕРі "+DestDir);
           FileDTName = "!!_Err_"+GetFName("");
-          WriteMessage("Сохранение неразобраного письма в файл: "+DestDir+FileDTName,0);
+          WriteMessage("РЎРѕС…СЂР°РЅРµРЅРёРµ РЅРµСЂР°Р·РѕР±СЂР°РЅРѕРіРѕ РїРёСЃСЊРјР° РІ С„Р°Р№Р»: "+DestDir+FileDTName,0);
           errstrl->SaveToFile(DestDir+FileDTName);
-          WriteFullMessage("Удаление письма №"+IntToStr(i));
+          WriteFullMessage("РЈРґР°Р»РµРЅРёРµ РїРёСЃСЊРјР° в„–"+IntToStr(i));
           POP3_ReadMail->Delete(i);
         }catch(Exception& E){
           WriteMessage("!!! GetMail_2: "+E.Message,0);
@@ -316,7 +316,7 @@ bool __fastcall TReadThread::GetMail()
       }
       errstrl->Clear();
     }
-    WriteMessage("+++ Завершено чтение почты с почтового сервера. Прочитано: "+IntToStr(MsgCount)+" писем.",0);
+    WriteMessage("+++ Р—Р°РІРµСЂС€РµРЅРѕ С‡С‚РµРЅРёРµ РїРѕС‡С‚С‹ СЃ РїРѕС‡С‚РѕРІРѕРіРѕ СЃРµСЂРІРµСЂР°. РџСЂРѕС‡РёС‚Р°РЅРѕ: "+IntToStr(MsgCount)+" РїРёСЃРµРј.",0);
   }catch(Exception& E){
     delete MsgBody;
     delete tmpMsgBody;
@@ -336,13 +336,13 @@ bool __fastcall TReadThread::GetMail()
 bool __fastcall TReadThread::ExecApp(AnsiString CmdLine,AnsiString aFileName)
 {
   try{
-    WriteFullMessage("Запуск приложения "+CmdLine);
+    WriteFullMessage("Р—Р°РїСѓСЃРє РїСЂРёР»РѕР¶РµРЅРёСЏ "+CmdLine);
     CmdLine=CmdLine+" \""+aFileName+"\"";
     if(WinExec(CmdLine.c_str(),SW_HIDE)>31)
       return true;
-    WriteMessage("Ошибка при запуске приложения "+CmdLine);
+    WriteMessage("РћС€РёР±РєР° РїСЂРё Р·Р°РїСѓСЃРєРµ РїСЂРёР»РѕР¶РµРЅРёСЏ "+CmdLine);
   }catch(Exception& E){
-    WriteMessage("Ошибка запуска приложения: "+E.Message);
+    WriteMessage("РћС€РёР±РєР° Р·Р°РїСѓСЃРєР° РїСЂРёР»РѕР¶РµРЅРёСЏ: "+E.Message);
   }
   return false;
 }
@@ -354,17 +354,17 @@ void __fastcall TReadThread::DeleteTmpFiles()
   try{
     GetTempPath(sizeof(c),c);
     TmpDir = c;
-    WriteFullMessage("*** Удаление временных файлов ***");
+    WriteFullMessage("*** РЈРґР°Р»РµРЅРёРµ РІСЂРµРјРµРЅРЅС‹С… С„Р°Р№Р»РѕРІ ***");
     if(GetFilesName(TmpDir, "ind*.*", ".tmp")){
       for(int i=0; i<tmpFilesName->Count&&!Terminated; i++){
-        WriteFullMessage("Удаление файла "+TmpDir+tmpFilesName->Strings[i]);
+        WriteFullMessage("РЈРґР°Р»РµРЅРёРµ С„Р°Р№Р»Р° "+TmpDir+tmpFilesName->Strings[i]);
         if(!DeleteFile(TmpDir+tmpFilesName->Strings[i]))
-          WriteMessage("Ошибка при удалении файла "+TmpDir+tmpFilesName->Strings[i],0);
+          WriteMessage("РћС€РёР±РєР° РїСЂРё СѓРґР°Р»РµРЅРёРё С„Р°Р№Р»Р° "+TmpDir+tmpFilesName->Strings[i],0);
       }
     }
-    WriteFullMessage("Удаление временных файлов завершено");
+    WriteFullMessage("РЈРґР°Р»РµРЅРёРµ РІСЂРµРјРµРЅРЅС‹С… С„Р°Р№Р»РѕРІ Р·Р°РІРµСЂС€РµРЅРѕ");
   }catch(Exception& E){
-    WriteMessage("Ошибка удаления временных файлов: "+E.Message,0);
+    WriteMessage("РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ РІСЂРµРјРµРЅРЅС‹С… С„Р°Р№Р»РѕРІ: "+E.Message,0);
   }
 }
 //---------------------------------------------------------------------------
@@ -383,21 +383,21 @@ bool __fastcall TReadThread::UnpackFile(AnsiString aFileName)
                         CREATE_NEW_CONSOLE | HIGH_PRIORITY_CLASS,
                         NULL, NULL, &Startlnfo, &ProcInfo))
     {
-      WriteFullMessage("Ошибка запуска архиватора: "+IntToStr(GetLastError()));
+      WriteFullMessage("РћС€РёР±РєР° Р·Р°РїСѓСЃРєР° Р°СЂС…РёРІР°С‚РѕСЂР°: "+IntToStr(GetLastError()));
       res = false;
     }
     else
     {
-      WriteFullMessage("Распаковка файла "+aFileName);
+      WriteFullMessage("Р Р°СЃРїР°РєРѕРІРєР° С„Р°Р№Р»Р° "+aFileName);
       if (WaitForSingleObject(ProcInfo.hProcess, 30000) == WAIT_TIMEOUT){
-        WriteMessage("За 30 сек. распаковка архива не завершена.");
+        WriteMessage("Р—Р° 30 СЃРµРє. СЂР°СЃРїР°РєРѕРІРєР° Р°СЂС…РёРІР° РЅРµ Р·Р°РІРµСЂС€РµРЅР°.");
         res = false;
         TerminateProcess(ProcInfo.hProcess, 1);
       }
       CloseHandle(ProcInfo.hProcess);
     }
   }catch(Exception& E){
-      WriteMessage("Ошибка распаковки файла: "+E.Message);
+      WriteMessage("РћС€РёР±РєР° СЂР°СЃРїР°РєРѕРІРєРё С„Р°Р№Р»Р°: "+E.Message);
       res = false;
   }
   return res;
@@ -431,7 +431,7 @@ void __fastcall TReadThread::ReadInitParam()
     FArchExtensions = Initial->ArchExtensions;
     FPOP3_Connects = &Initial->POP3_Connects;
   }catch(Exception& E){
-        WriteMessage("Ошибка чтения параметров: "+E.Message);
+        WriteMessage("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ: "+E.Message);
   }
 }
 // --------------------------------------------------------------------------
@@ -448,7 +448,7 @@ AnsiString __fastcall TReadThread::GetFName(AnsiString s)
    }
    return s;
   }catch(Exception &E){
-    WriteMessage("Ошибка получения имени файла: "+E.Message);
+    WriteMessage("РћС€РёР±РєР° РїРѕР»СѓС‡РµРЅРёСЏ РёРјРµРЅРё С„Р°Р№Р»Р°: "+E.Message);
   }
   return "f"+TDateTime::CurrentDateTime().FormatString("yymmddhhnnsszzz")+".txt";
 }
@@ -461,7 +461,7 @@ AnsiString __fastcall TReadThread::ConvertStr(AnsiString s)
   AnsiString ss=s;
   long ltype=0;
   try{
-    WriteFullMessage("Раскодируем: "+s);
+    WriteFullMessage("Р Р°СЃРєРѕРґРёСЂСѓРµРј: "+s);
     TextSeparate(s,"?",ts,0,0);
     if(ts->Count>4&&ts->Strings[0]=="="){
       if(ts->Strings[2].Trim()=="B"){
@@ -485,9 +485,9 @@ AnsiString __fastcall TReadThread::ConvertStr(AnsiString s)
         s=Koi8rToWin1251(s);
     }
 
-    WriteFullMessage("Результат раскодирования: "+s);
+    WriteFullMessage("Р РµР·СѓР»СЊС‚Р°С‚ СЂР°СЃРєРѕРґРёСЂРѕРІР°РЅРёСЏ: "+s);
   }catch(Exception &E){
-    WriteMessage("Ошибка декодирования: "+E.Message+" Строка:"+ss);
+    WriteMessage("РћС€РёР±РєР° РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ: "+E.Message+" РЎС‚СЂРѕРєР°:"+ss);
   }
   if(Id)
     delete Id;

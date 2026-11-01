@@ -15,7 +15,7 @@
 #include <IdCoderXXE.hpp>
 #pragma hdrstop
 
-// Добавляем явные указания линкеру подтянуть реализацию декодеров:
+// Р”РѕР±Р°РІР»СЏРµРј СЏРІРЅС‹Рµ СѓРєР°Р·Р°РЅРёСЏ Р»РёРЅРєРµСЂСѓ РїРѕРґС‚СЏРЅСѓС‚СЊ СЂРµР°Р»РёР·Р°С†РёСЋ РґРµРєРѕРґРµСЂРѕРІ:
 #pragma link "IdCoder.obj"
 #pragma link "IdCoder3to4.obj"
 #pragma link "IdCoderMIME.obj"
@@ -58,7 +58,7 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
   s=Koi8rToWin1251(s);
   //s=OEMToWin1251(s);
   //=?koi8-r?B?8MzBziDExcvBwtLYICAyMDA2Lnhscw==?=
-  //:00CC5E40 "\x0Fя\fМ\x1Cв\fL\\ј\x1C--‚\x02\x03#\x03\x03bз†З0яя"
+  //:00CC5E40 "\x0FСЏ\fРњ\x1CРІ\fL\\С\x1C--вЂљ\x02\x03#\x03\x03bР·вЂ Р—0СЏСЏ"
   delete Id;
 }
 //---------------------------------------------------------------------------

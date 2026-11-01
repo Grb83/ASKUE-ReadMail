@@ -13,7 +13,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
   if(ParamCount()>0&&(LowerCase(ParamStr(1)) == "/win32")){
     try{
       Forms::Application->Initialize();
-      Forms::Application->Title = "×òåíèå ïî÷òû";
+      Forms::Application->Title = "Ð§Ñ‚ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ñ‡Ñ‚Ñ‹";
       Forms::Application->CreateForm(__classid(TfmMain), &fmMain);
       Forms::Application->Run();
     }catch (Exception &exception){
@@ -26,7 +26,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         Forms::Application->Run();
         Initial = new TInitial();
         if(Initial->Read_ini()){
-          Initial->WriteFullMessage("Èíèöèàëèçàöèÿ ôóíêöèè ÷òåíèÿ ïî÷òû");
+          Initial->WriteFullMessage("Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð¿Ð¾Ñ‡Ñ‚Ñ‹");
           TReadThread *ReadThread=new TReadThread(true);
           ReadThread->FNoCycle = true;
           ReadThread->Execute();
@@ -53,7 +53,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
   if(ParamCount()>0&&(LowerCase(ParamStr(1)) == "/win32")){
     try{
       Forms::Application->Initialize();
-      Forms::Application->Title = "×òåíèå ïî÷òû";
+      Forms::Application->Title = "Ð§Ñ‚ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ñ‡Ñ‚Ñ‹";
       Forms::Application->CreateForm(__classid(TfmMain), &fmMain);
       Forms::Application->Run();
     }catch (Exception &exception){
@@ -66,7 +66,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         Forms::Application->Run();
         Initial = new TInitial();
         if(Initial->Read_ini()){
-          Initial->WriteFullMessage("Èíèöèàëèçàöèÿ ôóíêöèè ÷òåíèÿ ïî÷òû");
+          Initial->WriteFullMessage("Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð¿Ð¾Ñ‡Ñ‚Ñ‹");
           TReadThread *ReadThread=new TReadThread(true);
           ReadThread->FNoCycle = true;
           ReadThread->Execute();

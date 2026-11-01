@@ -27,7 +27,7 @@ protected:
                                    AnsiString Subject, AnsiString& CmdLine);
         AnsiString __fastcall GetFName(AnsiString s);
         AnsiString __fastcall ConvertStr(AnsiString s);
-       // Читает путь сохранения сообщения из файла конфигурации путей
+       // Р§РёС‚Р°РµС‚ РїСѓС‚СЊ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ РёР· С„Р°Р№Р»Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїСѓС‚РµР№
 public:
         void __fastcall Execute();
         bool FNoCycle;

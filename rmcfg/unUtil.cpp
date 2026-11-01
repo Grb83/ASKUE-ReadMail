@@ -44,7 +44,7 @@ AnsiString GetTmpPath(void)
   }
   AnsiString s=tmpdir;
   if(!DirectoryExists(s)&&!ForceDirectories(s))
-    throw Exception("Ошибка получения временного каталога");
+    throw Exception("РћС€РёР±РєР° РїРѕР»СѓС‡РµРЅРёСЏ РІСЂРµРјРµРЅРЅРѕРіРѕ РєР°С‚Р°Р»РѕРіР°");
   s = (s.LastDelimiter("\\")==s.Length()?s:s+"\\");
   return s;
 }

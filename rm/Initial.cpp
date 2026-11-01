@@ -29,7 +29,7 @@ __fastcall TInitial::~TInitial()
       delete (*Iter);
      }
 
-     WriteMessage("Останов",0);
+     WriteMessage("РћСЃС‚Р°РЅРѕРІ",0);
 }
 //---------------------------------------------------------------------------
 AnsiString GetNodeAttribute(IXMLNode* iNode, AnsiString AttribName, AnsiString DefaultValue = "")
@@ -49,10 +49,10 @@ bool TInitial::ReadPathsList(IXMLNode *RootNode)
     {
        PathsNode = RootNode->ChildNodes->FindNode("Paths");
        if (PathsNode == NULL)
-         throw Exception("В файле инициализации не найден узел <Paths>");
+         throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ СѓР·РµР» <Paths>");
       FDestinDir = GetNodeAttribute(PathsNode,"Default");
       if (FDestinDir.IsEmpty())
-         throw Exception("В файле инициализации не найден параметр <Paths> Default");
+         throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Paths> Default");
       FCmdLine = GetNodeAttribute(PathsNode,"ExecApp");
       PathsList = PathsNode->ChildNodes;
       if (PathsList->GetCount() == 0) return true;
@@ -67,7 +67,7 @@ bool TInitial::ReadPathsList(IXMLNode *RootNode)
          SelectPath->Path         = GetNodeAttribute(PathNode,"Path");
          SelectPath->CmdLine         = GetNodeAttribute(PathNode,"ExecApp");
          if (SelectPath->Path.IsEmpty()){
-            WriteMessage("В файле инициализации не найден параметр <Path> Path");
+            WriteMessage("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Path> Path");
             delete SelectPath;
             continue;
          }
@@ -76,7 +76,7 @@ bool TInitial::ReadPathsList(IXMLNode *RootNode)
     }
   catch(Exception& E)
   {
-        WriteMessage("Ошибка разбора файла инициализацииt: "+E.Message);
+        WriteMessage("РћС€РёР±РєР° СЂР°Р·Р±РѕСЂР° С„Р°Р№Р»Р° РёРЅРёС†РёР°Р»РёР·Р°С†РёРёt: "+E.Message);
         return false;
   }
   return true;
@@ -91,10 +91,10 @@ bool TInitial::ReadPOP3ServersList(IXMLNode *RootNode)
     {
        POP3ConnectsNode = RootNode->ChildNodes->FindNode("POP3Connects");
        if (POP3ConnectsNode == NULL)
-         throw Exception("В файле инициализации не найден узел <POP3Connects>");
+         throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ СѓР·РµР» <POP3Connects>");
        POP3ConnectsList =  POP3ConnectsNode->ChildNodes;
        if (POP3ConnectsList->GetCount() == 0)
-         throw Exception("Указан пустой список почтовых серверов");
+         throw Exception("РЈРєР°Р·Р°РЅ РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє РїРѕС‡С‚РѕРІС‹С… СЃРµСЂРІРµСЂРѕРІ");
        for(int i = 0; i < POP3ConnectsList->GetCount(); i++)
        {
          IXMLNode* POP3ConnectNode = POP3ConnectsList->Get(i);
@@ -130,18 +130,18 @@ bool __fastcall TInitial::Read_ini()
       ConfigFileName = ChangeFileExt( ParamStr(0), ".xml" );
       if (!FileExists(ConfigFileName)){
          ConfigFilePresent = false;
-         throw Exception("Файл не найден " + ConfigFileName);
+         throw Exception("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ " + ConfigFileName);
       }
       ConfigFilePresent = true;
 
        XMLDocument1 = LoadXMLDocument(ConfigFileName);
        if(!XMLDocument1->Active)
-         throw Exception("Ошибка чтения файла " + ConfigFileName);
+         throw Exception("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° " + ConfigFileName);
 
        XMLDocument1->Options = TXMLDocOptions();
        RootNode = XMLDocument1->DocumentElement;
        if (RootNode == NULL)
-         throw Exception("Ошибка формата файла " + ConfigFileName);
+         throw Exception("РћС€РёР±РєР° С„РѕСЂРјР°С‚Р° С„Р°Р№Р»Р° " + ConfigFileName);
 
 //     <Messages>
        MessagesNode = RootNode->ChildNodes->FindNode("Messages");
@@ -150,7 +150,7 @@ bool __fastcall TInitial::Read_ini()
        if(FEventFileName.LowerCase()=="no")
          FEventFileName="";
 
-       WriteFullMessage("**Запуск**");
+       WriteFullMessage("**Р—Р°РїСѓСЃРє**");
 
        str = GetNodeAttribute(MessagesNode,"WriteMessage","no");
        FWriteMessage = str.LowerCase()=="yes" ? true:false;
@@ -158,47 +158,47 @@ bool __fastcall TInitial::Read_ini()
         str = GetNodeAttribute(MessagesNode, "ReportLevel", "full");
         FReportLevel = str.LowerCase();
         if(!(FReportLevel=="full")&&!(FReportLevel=="compact"))
-         WriteMessage("В файле инициализации неверно указан параметр <Messages> ReportLevel {Compact, Full}");
+         WriteMessage("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµРІРµСЂРЅРѕ СѓРєР°Р·Р°РЅ РїР°СЂР°РјРµС‚СЂ <Messages> ReportLevel {Compact, Full}");
 
 //      <Service>
         ServiceNode = RootNode->ChildNodes->FindNode("Service");
         if(ServiceNode == NULL)
-           throw Exception("В файле инициализации не найден узел <Service>");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ СѓР·РµР» <Service>");
 
         FServiceName = GetNodeAttribute(ServiceNode, "ServiceName");
         if(FServiceName.IsEmpty())
-           throw Exception("В файле инициализации не найден параметр <Service> ServiceName");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Service> ServiceName");
 
         FDisplayName = GetNodeAttribute(ServiceNode, "DisplayName");
         if(FDisplayName.IsEmpty())
-           throw Exception("В файле инициализации не найден параметр <Service> DisplayName");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Service> DisplayName");
 
 //      <Connect>
         ConnectNode = RootNode->ChildNodes->FindNode("Connect");
         if (ConnectNode == NULL)
-           throw Exception("В файле инициализации не найден узел <Connect>");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ СѓР·РµР» <Connect>");
 
         str = GetNodeAttribute(ConnectNode, "ReconnectDelay");
         FReconnectDelay = StrToIntDef(str,-1);
         if(FReconnectDelay < 0)
-           throw Exception("В файле инициализации не найден параметр <Connect> ReconnectDelay, или он < 0 ");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Connect> ReconnectDelay, РёР»Рё РѕРЅ < 0 ");
 
         str = GetNodeAttribute(ConnectNode, "ConnectAttemptCount");
         FConnectAttemptCount = StrToIntDef(str,-1);
         if(FConnectAttemptCount < 1)
-           throw Exception("В файле инициализации не найден параметр <Connect> ConnectAttemptCount, или он < 1 ");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Connect> ConnectAttemptCount, РёР»Рё РѕРЅ < 1 ");
 
         FDBName = GetNodeAttribute(ConnectNode, "DBName");
         if(FDBName.IsEmpty())
-  //         throw Exception("В файле инициализации не найден параметр <Connect> DBName");
-           WriteMessage("В файле инициализации не найден параметр <Connect> DBName");
+  //         throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Connect> DBName");
+           WriteMessage("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <Connect> DBName");
 
 //      <File>
         FileNode = RootNode->ChildNodes->FindNode("File");
         str = GetNodeAttribute(FileNode, "SourceScanInterval");
         FSourceScanInterval = StrToIntDef(str,-1);
         if(FSourceScanInterval < 1)
-           throw Exception("В файле инициализации не найден параметр <File> SourceScanInterval, или он < 1 ");
+           throw Exception("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїР°СЂР°РјРµС‚СЂ <File> SourceScanInterval, РёР»Рё РѕРЅ < 1 ");
 
         str = GetNodeAttribute(FileNode, "SaveBodyToFile","yes");
         FSaveBodyToFile = str.LowerCase();
@@ -209,7 +209,7 @@ bool __fastcall TInitial::Read_ini()
         {
                 if(!(FArchStr.Pos(".exe")>0))
                 {
-                   WriteMessage("В файле инициализации неверно задан параметр [File] FArchStr. Не найдена подстрока с указанием архиватора. Архиватор будет запущен из PATH");
+                   WriteMessage("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµРІРµСЂРЅРѕ Р·Р°РґР°РЅ РїР°СЂР°РјРµС‚СЂ [File] FArchStr. РќРµ РЅР°Р№РґРµРЅР° РїРѕРґСЃС‚СЂРѕРєР° СЃ СѓРєР°Р·Р°РЅРёРµРј Р°СЂС…РёРІР°С‚РѕСЂР°. РђСЂС…РёРІР°С‚РѕСЂ Р±СѓРґРµС‚ Р·Р°РїСѓС‰РµРЅ РёР· PATH");
                    FArchStr = "WinRar";
                 }
                 else
@@ -217,7 +217,7 @@ bool __fastcall TInitial::Read_ini()
                     FArchStr = FArchStr.SubString(1,FArchStr.Pos(".exe")+3);
                     if(!FileExists(FArchStr))
                     {
-                      WriteMessage("Не найден архиватор "+FArchStr+". Архиватор будет запущен из PATH");
+                      WriteMessage("РќРµ РЅР°Р№РґРµРЅ Р°СЂС…РёРІР°С‚РѕСЂ "+FArchStr+". РђСЂС…РёРІР°С‚РѕСЂ Р±СѓРґРµС‚ Р·Р°РїСѓС‰РµРЅ РёР· PATH");
                       FArchStr = "WinRar";
                     }
                     else
@@ -227,16 +227,16 @@ bool __fastcall TInitial::Read_ini()
         else
         {
           FArchStr = "WinRar";
-          WriteMessage("В файле инициализации не задан параметр [File] FArchStr. Архиватор будет запущен из PATH");
+          WriteMessage("Р’ С„Р°Р№Р»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РЅРµ Р·Р°РґР°РЅ РїР°СЂР°РјРµС‚СЂ [File] FArchStr. РђСЂС…РёРІР°С‚РѕСЂ Р±СѓРґРµС‚ Р·Р°РїСѓС‰РµРЅ РёР· PATH");
         }
 
        str = GetNodeAttribute(FileNode, "ArchExtensions");
        FArchExtensions = str.LowerCase();
 
       if(!ReadPOP3ServersList(RootNode))
-        throw Exception("Ошибка чтения списка почтовых серверов");
+        throw Exception("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ СЃРїРёСЃРєР° РїРѕС‡С‚РѕРІС‹С… СЃРµСЂРІРµСЂРѕРІ");
      if(!ReadPathsList(RootNode))
-        throw Exception("Ошибка чтения списка путей сохранения сообщений");
+        throw Exception("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ СЃРїРёСЃРєР° РїСѓС‚РµР№ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЃРѕРѕР±С‰РµРЅРёР№");
 
      //      <SaveOriginalMessage>
         SaveOriginalMessageNode = RootNode->ChildNodes->FindNode("SaveOriginalMessage");
@@ -269,7 +269,7 @@ AnsiString __fastcall TInitial::GetReportLevel()
     }
    catch (Exception &E)
     {
-      	WriteMessage("Ошибка получения уровня ведения журнала: "+E.Message);
+      	WriteMessage("РћС€РёР±РєР° РїРѕР»СѓС‡РµРЅРёСЏ СѓСЂРѕРІРЅСЏ РІРµРґРµРЅРёСЏ Р¶СѓСЂРЅР°Р»Р°: "+E.Message);
     }
 
    return FReportLevel;

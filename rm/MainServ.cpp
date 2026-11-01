@@ -27,7 +27,7 @@ void __fastcall TsMain::ServiceStart(TService *Sender,
 {
     if(!ThreadExit)
     {
-         Initial->WriteFullMessage("»ÌËˆË‡ÎËÁ‡ˆËˇ ÙÛÌÍˆËË ˜ÚÂÌËˇ ÔÓ˜Ú˚");
+         Initial->WriteFullMessage("–ò–Ω–∏—Ü–∏–∞–ª–∏–∑–∞—Ü–∏—è —Ñ—É–Ω–∫—Ü–∏–∏ —á—Ç–µ–Ω–∏—è –ø–æ—á—Ç—ã");
          ReadThread = new TReadThread(true);
          ReadThread->OnTerminate=ReadThreadTerminate;
          ReadThread->Resume();
@@ -62,7 +62,7 @@ void __fastcall TsMain::ServiceStop(TService *Sender,
 void __fastcall TsMain::ReadThreadTerminate(System::TObject* Sender)
 {
   bool Stopped;
-  Initial->WriteMessage("ŒÒÚ‡ÌÓ‚ ÙÛÌÍˆËË ˜ÚÂÌËˇ ÔÓ˜Ú˚",0);
+  Initial->WriteMessage("–û—Å—Ç–∞–Ω–æ–≤ —Ñ—É–Ω–∫—Ü–∏–∏ —á—Ç–µ–Ω–∏—è –ø–æ—á—Ç—ã",0);
   ThreadExit=true;
   try
   {
