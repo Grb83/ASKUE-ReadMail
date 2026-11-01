@@ -1,0 +1,28 @@
+# Тяжелые DLL Oracle (их скачивают отдельно через Oracle Instant Client)
+oraociei11.dll
+*.sym
+
+# Бинарники и промежуточные файлы сборки Borland C++ Builder
+*.obj
+*.tds
+*.exe
+*.dll
+*.ocx
+*.dcu
+*.drc
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.map
+*.~*
+*.dsk
+
+# Временные файлы и кэш
+Thumbs.db
+*.log
+*.rar
+*.zip
+
+# Временные файлы MS Office
+~$*

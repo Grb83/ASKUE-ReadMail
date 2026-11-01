@@ -1,0 +1,72 @@
+Return-path: <tec2maket@ukrpost.ua>
+Envelope-to: askuenew@esb.kh.energy.gov.ua
+Delivery-date: Tue, 14 Apr 2009 08:20:19 +0300
+Received: from exim (helo=esb.kh.energy.gov.ua)
+	by esb.kh.energy.gov.ua with local-smtp (Exim 4.40)
+	id 1Ltb4F-0003Lw-U8
+	for askuenew@esb.kh.energy.gov.ua; Tue, 14 Apr 2009 08:20:19 +0300
+Received: from obl.kh.energy.gov.ua ([10.105.1.66])
+	by esb.kh.energy.gov.ua with esmtp (Exim 4.40)
+	id 1Ltb4F-0003Lf-Iq; Tue, 14 Apr 2009 08:20:19 +0300
+Received: from mail5.ukrpost.ua ([195.5.46.61])
+	by obl.kh.energy.gov.ua with esmtp (Exim 4.69 (FreeBSD))
+	(envelope-from <tec2maket@ukrpost.ua>)
+	id 1LtbBb-000Fbz-28; Tue, 14 Apr 2009 08:27:55 +0300
+Received: from 155-39-207-82.pool.ukrtel.net ([82.207.39.155] helo=dispetcher)
+	by mail5.ukrpost.ua with esmtpa (Exim 4.69)
+	(envelope-from <tec2maket@ukrpost.ua>)
+	id 1Ltb9R-0007Xp-Lu; Tue, 14 Apr 2009 08:25:42 +0300
+From: "tec2maket@ukrpost.ua" <tec2maket@ukrpost.ua>
+Subject: maket_30818
+To: askuenew@esb.kh.energy.gov.ua, maket_prom@bk.ru,
+ askueore@esb.kh.energy.gov.ua
+MIME-Version: 1.0
+Date: Tue, 14 Apr 2009 08:28:50 +0000
+Content-Type: application/octet-stream;
+        name="RI130409_818.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+        filename="RI130409_818.txt"
+Message-Id: <E1Ltb4F-0003Lw-U8@esb.kh.energy.gov.ua>
+
+KCgvLzMwODE4OjA0MTM6MDAwMTA3MDQ6KysNCig5ODAzMik6MjcxMTUsMzAwOjo6OjoNCig5ODAz
+MSk6MCwwMDA6Ojo6Og0KKDk4MDM1KTo0MDA5LDMwMDo6Ojo6DQooOTgwMzMpOjM2LDMwMDo6Ojo6
+DQooOTgwNDIpOjAsMDAwOjo6OjoNCig5ODA0MSk6MCwwMDA6Ojo6Og0KKDk4MDQ1KTowLDAwMDo6
+Ojo6DQooOTgwNDMpOjAsMDAwOjo6OjoNCig5ODA1Mik6Nzg1NjQ2LDMyMDo6Ojo6DQooOTgwNTEp
+OjAsMDAwOjo6OjoNCig5ODA1NSk6MTQ5MDQ5LDc2MDo6Ojo6DQooOTgwNTMpOjAsMDgwOjo6OjoN
+Cig5ODA2Mik6NzAzMzMsMjAwOjo6OjoNCig5ODA2MSk6MCwwMDA6Ojo6Og0KKDk4MDY1KTo4ODgz
+Niw2MDA6Ojo6Og0KKDk4MDYzKTo3OTgsMDAwOjo6OjoNCig5ODA3Mik6MTU4MTksMTAwOjo6OjoN
+Cig5ODA3MSk6MCwwMDA6Ojo6Og0KKDk4MDc1KToxMDAsODAwOjo6OjoNCig5ODA3Myk6ODc1LDMw
+MDo6Ojo6DQooOTgwODIpOjMyNjEyLDIwMDo6Ojo6DQooOTgwODEpOjAsMDAwOjo6OjoNCig5ODA4
+NSk6NCwxMDA6Ojo6Og0KKDk4MDgzKTozNzI0LDYwMDo6Ojo6DQooOTgxMDIpOjY2Nzc3Miw1MjA6
+Ojo6Og0KKDk4MTAxKTowLDAwMDo6Ojo6DQooOTgxMDUpOjY0NDU0NSwzODA6Ojo6Og0KKDk4MTAz
+KTo4LDE2MDo6Ojo6DQooOTgxMTIpOjc0MTE4NjI0MCwwMDA6Ojo6Og0KKDk4MTExKTozNTIwMCww
+MDA6Ojo6Og0KKDk4MTE1KTo4MjIyNTc2MCwwMDA6Ojo6Og0KKDk4MTEzKToxMDI2NDAsMDAwOjo6
+OjoNCig5ODEyMik6MTA1MjMzMTM2MCwwMDA6Ojo6Og0KKDk4MTIxKTo0MzIwLDAwMDo6Ojo6DQoo
+OTgxMjUpOjExNDU5NTEyMCwwMDA6Ojo6Og0KKDk4MTIzKToxMjg0ODAsMDAwOjo6OjoNCig5ODEz
+Mik6MzMxMjQ4NzIsMDAwOjo6OjoNCig5ODEzMSk6NTYwNDYxOTY4LDAwMDo6Ojo6DQooOTgxMzUp
+OjEwNjI5MDIyOCwwMDA6Ojo6Og0KKDk4MTMzKTozMTUxMzY4LDAwMDo6Ojo6DQooOTgxNDIpOjIx
+Njg0MzAwLDAwMDo6Ojo6DQooOTgxNDEpOjgxODU3OTkxNiwwMDA6Ojo6Og0KKDk4MTQ1KToxMjcy
+NzYyNDgsMDAwOjo6OjoNCig5ODE0Myk6MzMzNTUwOCwwMDA6Ojo6Og0KKDk4MTUyKTo4NDQ4Njg4
+OCwwMDA6Ojo6Og0KKDk4MTUxKTowLDAwMDo6Ojo6DQooOTgxNTUpOjczODcxOTc2LDAwMDo6Ojo6
+DQooOTgxNTMpOjIyOCwwMDA6Ojo6Og0KKDk4MTYyKToxMDYxMTYxNDQsMDAwOjo6OjoNCig5ODE2
+MSk6NDc5OTc2LDAwMDo6Ojo6DQooOTgxNjUpOjkxNzQ4ODIwLDAwMDo6Ojo6DQooOTgxNjMpOjIw
+NTQ4OCwwMDA6Ojo6Og0KKDk4MTcyKToxMDIxNzU1NiwwMDA6Ojo6Og0KKDk4MTcxKTo5MDgyOCww
+MDA6Ojo6Og0KKDk4MTc1KTo4MDk0NTE2LDAwMDo6Ojo6DQooOTgxNzMpOjM3NTMxMiwwMDA6Ojo6
+Og0KKDk4MTgyKTo0MzIzOTAsMDAwOjo6OjoNCig5ODE4MSk6MTkxNCwwMDA6Ojo6Og0KKDk4MTg1
+KTozNzkyNzgsMDAwOjo6OjoNCig5ODE4Myk6MTk5MDIsMDAwOjo6OjoNCig5ODE5Mik6MCwwMDA6
+Ojo6Og0KKDk4MTkxKTowLDAwMDo6Ojo6DQooOTgxOTUpOjAsMDAwOjo6OjoNCig5ODE5Myk6MCww
+MDA6Ojo6Og0KKDk4MjAyKTo0LDk1MDo6Ojo6DQooOTgyMDEpOjAsMDAwOjo6OjoNCig5ODIwNSk6
+MTEsMjUwOjo6OjoNCig5ODIwMyk6MCwwMDA6Ojo6Og0KKDk4MjEyKToxNjgyMjE3LDAwMDo6Ojo6
+DQooOTgyMTEpOjAsMDAwOjo6OjoNCig5ODIxNSk6MTQ2OTYyNSwzMDA6Ojo6Og0KKDk4MjEzKTow
+LDAwMDo6Ojo6DQooOTgyMjIpOjg3NjM1LDgyMDo6Ojo6DQooOTgyMjEpOjAsMDAwOjo6OjoNCig5
+ODIyNSk6MTI5MjQsNjQwOjo6OjoNCig5ODIyMyk6MiwyNjA6Ojo6Og0KKDk4MjMyKToxNTY4OTgs
+MDIwOjo6OjoNCig5ODIzMSk6MCwwMDA6Ojo6Og0KKDk4MjM1KToxNDY4OTAsNTYwOjo6OjoNCig5
+ODIzMyk6MCwwNjA6Ojo6Og0KKDk4MjQyKTowLDAwMDo6Ojo6DQooOTgyNDEpOjAsMDAwOjo6OjoN
+Cig5ODI0NSk6MCwwMDA6Ojo6Og0KKDk4MjQzKTowLDAwMDo6Ojo6DQooOTgyNTIpOjk2MTI4LDk2
+MDo6Ojo6DQooOTgyNTEpOjAsMDAwOjo6OjoNCig5ODI1NSk6MTcwNyw2MDA6Ojo6Og0KKDk4MjUz
+KToyOTksODQwOjo6OjoNCig5ODI2Mik6Mzg1Niw2NjA6Ojo6Og0KKDk4MjYxKTowLDAwMDo6Ojo6
+DQooOTgyNjUpOjEzNzUsNDIwOjo6OjoNCig5ODI2Myk6MTQsNDAwOjo6OjoNCj09KSk=
+
+
+

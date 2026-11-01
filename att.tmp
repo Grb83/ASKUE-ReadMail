@@ -1,0 +1,51 @@
+Return-Path: <entech@entech.kiev.ua>
+Received: from db.energy.gov.ua (ns.db.energy.gov.ua [10.1.2.36])
+	by ora.db.energy.gov.ua (8.13.1/8.13.1) with ESMTP id n53LfD3E019800
+	for <balance@ora.db.energy.gov.ua>; Thu, 4 Jun 2009 00:41:13 +0300
+Received: from des.org.ua (des.db.energy.gov.ua [10.1.2.2])
+	by db.energy.gov.ua (8.13.8/8.13.8) with ESMTP id n53LfDlA001547
+	for <balance@ora.db.energy.gov.ua>; Thu, 4 Jun 2009 00:41:13 +0300
+Received: from mail.entech.kiev.ua (entech.kiev.ua [213.160.128.202])
+	by des.org.ua (8.13.8/8.13.8) with ESMTP id n53Lf8rO014872
+	for <balance@ora.db.energy.gov.ua>; Thu, 4 Jun 2009 00:41:08 +0300
+Message-Id: <200906032141.n53Lf8rO014872@des.org.ua>
+X-Spam-Status: No, score=-91.2 required=5.0 tests=AWL,BAD_ENC_HEADER,
+	MISSING_MID,RCVD_IN_XBL,TVD_SPACE_RATIO,USER_IN_WHITELIST autolearn=no
+	version=3.2.5
+Received: from test-ed48b6a34f ([192.168.127.15])
+	(authenticated user entech@entech.kiev.ua)
+	by mail.entech.kiev.ua;
+	Thu, 4 Jun 2009 00:41:09 +0300
+From: =?ISO-8859-1?Q?=C5=ED=E5=F0=E3=EE=F2=E5=F5=ED=EE=EB=EE=E3=E8=E9?=
+ <entech@entech.kiev.ua>
+Subject: =?ISO-8859-1?Q?=EC=E0=EA=E5=F2 =EE=F2
+ =C5=ED=E5=F0=E3=EE=F2=E5=F5=ED=EE?=
+	=?ISO-8859-1?Q?=EB=EE=E3=E8=E9?=
+To: babih@ua.fm, egor@entech.kiev.ua, balance@ora.db.energy.gov.ua
+Content-Type: multipart/mixed; boundary="=_MoreStuf_2zzz1234sadvnqw3nerasdf"
+MIME-Version: 1.0
+Date: Thu, 4 Jun 2009 00:40:59 +0300
+X-Virus-Scanned: ClamAV 0.94/9418/Wed Jun  3 15:18:15 2009 on des.org.ua
+X-Virus-Status: Clean
+X-Spam-Checker-Version: SpamAssassin 3.2.5 (2008-06-10) on des.org.ua
+
+This is a multi-part message in MIME format
+
+--=_MoreStuf_2zzz1234sadvnqw3nerasdf
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+
+--=_MoreStuf_2zzz1234sadvnqw3nerasdf
+Content-Type: application/octet-stream;
+        name="03_06_09_EnTech.bls"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+        filename="03_06_09_EnTech.bls"
+
+MDQuMDYuMDkgMDA6NDA6NTkNCjwgREFURT0wMzA2MDk7IEZPUk1BVD1NV1QuSCA+DQo8IElEPTc4
+MTsgRT0xODowLDEsMSwxLDAsMSwxLDEsMCwxLDEsMSwwLDEsMSwxLDAsMSwxLDEsMSwxLDAsMTsg
+U1Q9IDsgPg0KPCBJRD03ODA7IEU9MTowLDAsMCwwLDAsMCwwLDEsMCwwLDAsMCwwLDAsMCwwLDAs
+MCwwLDAsMCwwLDAsMDsgU1Q9IDsgPg0K
+
+--=_MoreStuf_2zzz1234sadvnqw3nerasdf--

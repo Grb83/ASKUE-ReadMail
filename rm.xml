@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<RMConfig>
+	<Service ServiceName="RM" DisplayName="Чтение почты"/>
+	<Connect ReconnectDelay="20" ConnectAttemptCount="3" DBName=""/>
+	<File SourceScanInterval="30" SaveBodyToFile="yes" ArchExtensions="*.rar,*.arj,*.zip" ArchStr=""/>
+	<Paths Default="C:\ASKUEMAIL\FROM\readmail" ExecApp="">
+		<Path Caption="readmail" Subject="*" AddressSmall="*" AddressFull="*" Path="C:\ASKUEMAIL\FROM\readmail" ExecApp=""/>
+	</Paths>
+	<POP3Connects>
+		<POP3Connect Host="127.0.0.1" Port="110" UserID="readmail@tec5.local" Password="admin"/>
+	</POP3Connects>
+	<SaveOriginalMessage SaveOriginal="no" SaveOriginalPath="C:\ASKUEMAIL\AllMailBox"/>
+	<Messages WriteMessage="yes" LogFileName="RM.log" ReportLevel="full" EventFileName=""/>
+</RMConfig>

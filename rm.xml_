@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<RMConfig>
+	<Service ServiceName="RM" DisplayName="Чтение почты"/>
+	<Connect ReconnectDelay="10" ConnectAttemptCount="3"/>
+	<File SourceScanInterval="30" SaveBodyToFile="Yes" ArchExtensions="*.rar,*.arj,*.zip" ArchStr=""/>
+	<Paths Default="C:\Program Files\khartep\readmail\oikmail" ExecApp="">
+		<Path Subject="*10015*" AddressSmall="*" AddressFull="*energy.gov.ua" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\disp\10015" ExecApp=""/>
+		<Path Subject="*10014*" AddressSmall="*" AddressFull="*energy.gov.ua" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\disp\10014" ExecApp=""/>
+		<Path Subject="*10133*" AddressSmall="*" AddressFull="*energy.gov.ua" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\disp\10133" ExecApp=""/>
+		<Path Subject="MAKET_817*" AddressSmall="*" AddressFull="*" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\817" ExecApp=""/>
+		<Path Subject="*bep*" AddressSmall="*" AddressFull="*" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\817" ExecApp=""/>
+		<Path Subject="*" AddressSmall="*" AddressFull="data@rdcm.sw.energy.gov.ua" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\30817" ExecApp=""/>
+		<Path Subject="*817*" AddressSmall="*" AddressFull="*" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\30817" ExecApp=""/>
+		<Path Subject="*1856*" AddressSmall="*" AddressFull="*nec.energy.gov.ua" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets\1856" ExecApp=""/>
+		<Path Subject="*" AddressSmall="*" AddressFull="*energy.gov.ua" Path="c:\Program Files\Khartep\ReadMail\oikmail\makets" ExecApp=""/>
+		<Path Subject="*" AddressSmall="*" AddressFull="*" Path="c:\Program Files\Khartep\ReadMail\oikmail\trash" ExecApp=""/>
+	</Paths>
+	<POP3Connects>
+		<POP3Connect Host="192.168.1.1" Port="110" UserID="ask_dartec" Password="askue"/>
+	</POP3Connects>
+	<SaveOriginalMessage SaveOriginal="yes" SaveOriginalPath="C:\Program Files\Khartep\ReadMail\AllMailBox"/>
+	<Messages WriteMessage="yes" LogFileName="" ReportLevel="Full" EventFileName=""/>
+</RMConfig>

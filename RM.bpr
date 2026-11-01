@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="RM.exe"/>
+    <OBJFILES value="RM.obj rm\Main.obj rm\ReadThread.obj rm\Initial.obj rm\MailThread.obj 
+      rm\MainServ.obj rm\kasUtil.obj rm\ConnStatus.obj"/>
+    <RESFILES value="RM.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) rm\Main.dfm rm\MainServ.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="odac60.lib dac60.lib dbrtl.lib bcbsmp.lib inet.lib xmlrtl.lib vclx.lib 
+      Indy60.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib Indy60.lib vclx.lib xmlrtl.lib inet.lib bcbsmp.lib 
+      dbrtl.lib dac60.lib odac60.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      bcb97axserver.bpi bcbshlctrls.bpi indy.bpi"/>
+    <PATHCPP value=".;rm;rm;rm;rm;rm;rm;rm"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="RM.cpp"/>
+    <INCLUDEPATH value="$(BCB)\Projects\ReadMail\rm;&quot;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src&quot;;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\ODAC_191031\Source\CBuilder6;$(BCB)"/>
+    <LIBPATH value="&quot;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src&quot;;$(BCB);&quot;c:\program files\borland\cbuilder6\components\c6&quot;;$(BCB)\Projects\ReadMail\rm;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$(BCB)\ODAC_191031\Source\CBuilder6"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\Projects\ReadMail\rm 
+      -I&quot;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src&quot; 
+      -I$(BCB)\Imports -I$(BCB)\include -I$(BCB)\include\vcl -I$(INCLUDE) 
+      -I$(BCB)\ODAC_191031\Source -I$(BCB)\ODAC_191031\Source\CBuilder6 -I$(BCB) 
+      -src_suffix cpp -D_DEBUG -no_tie -boa"/>
+    <CFLAG1 value="-Od -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c -tWM"/>
+    <CFLAG2 value=""/>
+    <CFLAG3 value=""/>
+    <PFLAGS value="-AWinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE 
+      -$Y+ -$W -$O- -$A8 -v -JPHNV -M -JPHNE"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mu /w0 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <IFLAGS value=""/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="RM.cpp" FORMNAME="" UNITNAME="RM" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="RM.res" FORMNAME="" UNITNAME="RM.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\Main.cpp" FORMNAME="fmMain" UNITNAME="Main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\ReadThread.cpp" FORMNAME="" UNITNAME="ReadThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\Initial.cpp" FORMNAME="" UNITNAME="Initial" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\MailThread.cpp" FORMNAME="" UNITNAME="MailThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\MainServ.cpp" FORMNAME="sMain" UNITNAME="MainServ" CONTAINERID="CCompiler" DESIGNCLASS="TService" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\kasUtil.cpp" FORMNAME="" UNITNAME="kasUtil" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\ConnStatus.cpp" FORMNAME="" UNITNAME="ConnStatus" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=3
+MinorVer=4
+Release=6
+Build=2
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=ИНТЭП
+FileDescription=Почтовый робот
+FileVersion=3.4.6.2
+InternalName=Rm
+LegalCopyright=ИНТЭП
+LegalTrademarks=ИНТЭП
+OriginalFilename=Rm.exe
+ProductName=Почтовый робот
+ProductVersion=3.4.6.2
+
+[HistoryLists\hlIncludePath]
+Count=20
+Item0=$(BCB)\Projects\ReadMail\rm;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\ODAC_191031\Source\CBuilder6\;$(BCB)
+Item1=$(BCB)\Projects\ReadMail\rm;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)
+Item2=$(BCB)\Projects\ReadMail\rm;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\DLK
+Item3=$(BCB)\Projects\ReadMail\rm;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source
+Item4=$(BCB)\Projects\ReadMail\rm;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source
+Item5=$(BCB)\Projects\ReadMail\rm;rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src
+Item6=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src
+Item7=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\indy9_00_17_src
+Item8=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\indy10.0.52_source
+Item9=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy
+Item10=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source
+Item11=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE)
+Item12=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031
+Item13=rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\
+Item14=rm\;rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE);$(BCB)\ODAC_191031\Source
+Item15=rm\;rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(INCLUDE)
+Item16=rm\;rm;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl
+Item17=rm\;rm;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl
+Item18=rm;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl
+Item19=rm\;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=19
+Item0=$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB);c:\program files\borland\cbuilder6\components\c6;$(BCB)\Projects\ReadMail\rm;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$(BCB)\ODAC_191031\Source\CBuilder6\
+Item1=$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB);$(BCB)\Projects\ReadMail\rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item2=$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\DLK;$(BCB)\Projects\ReadMail\rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item3=$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects\ReadMail\rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item4=$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects\ReadMail\rm;rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item5=$(BCB)\Projects\ReadMail\rm;rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src
+Item6=rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src
+Item7=rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\indy9_00_17_src
+Item8=rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy\indy10.0.52_source
+Item9=rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source;$(BCB)\Sechin_Components\CBUILDER 6.0\Component\Indy
+Item10=rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item11=rm;c:\program files\borland\cbuilder6\components\c6;$(BCB)\Projects\ReadMail\rm;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item12=rm;c:\program files\borland\cbuilder6\components\c6;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj;$(BCB)\ODAC_191031\Source
+Item13=rm;c:\program files\borland\cbuilder6\components\c6;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj
+Item14=rm\;rm;c:\program files\borland\cbuilder6\components\c6;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj
+Item15=rm\;c:\program files\borland\cbuilder6\components\c6;rm;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj
+Item16=c:\program files\borland\cbuilder6\components\c6;rm\;rm;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj
+Item17=rm\;rm;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj
+Item18=rm\;..\..\Training\Other\kasUtil;$(BCB)\Imports;$(BCB)\lib;$(BCB)\bin;$(BCB)\lib\obj
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\Source\Indy\
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlUnitAliases]
+Count=1
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE
+
+[Debugging]
+DebugSourceDirs=$(BCB)\Source\Indy\
+
+[Parameters]
+RunParams=/oc
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=1
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

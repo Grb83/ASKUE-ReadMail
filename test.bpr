@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="test.exe"/>
+    <OBJFILES value="test.obj test\untest.obj rm\kasUtil.obj 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdCoder.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdCoder3to4.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdCoderMIME.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdGlobal.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdBaseComponent.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdResourceStrings.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdException.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdURI.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdStack.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdStackWindows.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdStackConsts.obj&quot; 
+      &quot;..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdWinSock2.obj&quot;"/>
+    <RESFILES value="test.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) test\untest.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="schem.lib MyTable.lib oraprov60.lib odacvcl60.lib dacvcl60.lib dac60.lib 
+      odac60.lib bcb2kaxserver.lib dbxcds.lib dclocx.lib soaprtl.lib bcbie.lib 
+      nmfast.lib dbexpress.lib inetdbxpress.lib inetdbbde.lib bcbsmp.lib 
+      dsnapcon.lib dsnapcrba.lib visualdbclx.lib teeqr.lib dss.lib tee.lib 
+      teedb.lib teeui.lib vcldbx.lib qrpt.lib bdertl.lib bdecds.lib cds.lib 
+      ibxpress.lib adortl.lib vcldb.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib vcldb.lib adortl.lib ibxpress.lib cds.lib bdecds.lib 
+      bdertl.lib qrpt.lib vcldbx.lib teeui.lib teedb.lib tee.lib dss.lib 
+      teeqr.lib visualdbclx.lib dsnapcrba.lib dsnapcon.lib bcbsmp.lib 
+      inetdbbde.lib inetdbxpress.lib dbexpress.lib nmfast.lib bcbie.lib 
+      soaprtl.lib dclocx.lib dbxcds.lib bcb2kaxserver.lib odac60.lib dac60.lib 
+      dacvcl60.lib odacvcl60.lib oraprov60.lib MyTable.lib schem.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi ibxpress.bpi 
+      dsnap.bpi cds.bpi bdecds.bpi bdertl.bpi qrpt.bpi teeui.bpi teedb.bpi 
+      tee.bpi vcldbx.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      bcb2kaxserver.bpi odac60.bpi dac60.bpi dacvcl60.bpi odacvcl60.bpi 
+      oraprov60.bpi MyTable.bpi schem.bpi"/>
+    <PATHCPP value=".;test;rm"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT"/>
+    <MAINSOURCE value="test.cpp"/>
+    <INCLUDEPATH value="$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;&quot;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src&quot;;$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\ODAC_191031\Source\CBuilder6"/>
+    <LIBPATH value="&quot;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src&quot;;$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\ODAC_191031\Source\CBuilder6"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\Projects\ReadMail\rm -I$(BCB)\Projects\ReadMail\test 
+      -I&quot;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src&quot; 
+      -I$(BCB)\Projects -I$(BCB)\include -I$(BCB)\include\vcl 
+      -I$(BCB)\ODAC_191031\Source\CBuilder6 -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="test.res" FORMNAME="" UNITNAME="test.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="test.cpp" FORMNAME="" UNITNAME="test" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="test\untest.cpp" FORMNAME="Form1" UNITNAME="untest" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rm\kasUtil.cpp" FORMNAME="" UNITNAME="kasUtil" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdCoder.obj" FORMNAME="" UNITNAME="IdCoder.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdCoder3to4.obj" FORMNAME="" UNITNAME="IdCoder3to4.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdCoderMIME.obj" FORMNAME="" UNITNAME="IdCoderMIME.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdGlobal.obj" FORMNAME="" UNITNAME="IdGlobal.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdBaseComponent.obj" FORMNAME="" UNITNAME="IdBaseComponent.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdResourceStrings.obj" FORMNAME="" UNITNAME="IdResourceStrings.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdException.obj" FORMNAME="" UNITNAME="IdException.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdURI.obj" FORMNAME="" UNITNAME="IdURI.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdStack.obj" FORMNAME="" UNITNAME="IdStack.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdStackWindows.obj" FORMNAME="" UNITNAME="IdStackWindows.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdStackConsts.obj" FORMNAME="" UNITNAME="IdStackConsts.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src\IdWinSock2.obj" FORMNAME="" UNITNAME="IdWinSock2.obj" CONTAINERID="OBJTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=5
+Item0=$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\ODAC_191031\Source\CBuilder6
+Item1=$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item2=$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;rm;test;$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item3=$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;rm;test;$(BCB)\Projects;$(BCB)\Projects\ReadMail\test;$(BCB)\include;$(BCB)\include\vcl
+Item4=rm;test;C:\Program Files\Borland\CBuilder6\Projects;C:\SAA\CBUILDER 6.0\Projects\ReadMail\test;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=6
+Item0=$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\ODAC_191031\Source\CBuilder6
+Item1=$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;rm;test;$(BCB)\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=$(BCB)\Projects\ReadMail\rm;$(BCB)\Projects\ReadMail\test;$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;rm;test;$(BCB)\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item4=$(BCB)\\Sechin_Components\CBUILDER 6.0\Component\Indy\Indy_9_00_17_src;rm;test;$(BCB)\Projects;$(BCB)\Projects\ReadMail\test;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item5=rm;test;C:\Program Files\Borland\CBuilder6\Projects;C:\SAA\CBUILDER 6.0\Projects\ReadMail\test;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

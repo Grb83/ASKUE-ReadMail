@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="Windows-1251" standalone="no"?>
+<RMConfig>
+ <Paths Default = "c:\temp\mail\">
+ <!-- Формат    узлов: 
+     Subject - тема сообщения
+     AddressSmall - имя ящика
+     AddressFull - полный адрес
+     при задании этих параметров можно использовать маску * место значения параметра
+     Path - путь, по которому сохраняется содержание сообщения и присоединенные файлы
+     (в конце путь символ \ ставить не надо)
+     CmdLine - путь и параметры для запуска внешнего приложения, если ничего запускать не надо, этот параметр отсутствует
+ -->
+  <Path Subject = "*" AddressSmall = "*" AddressFull = "*" Path = "c:\temp\mail\1"/>
+ </Paths>
+ <POP3Connects>
+  <POP3Connect Host= "10.67.1.66" Port="110" UserID="ascue" Password="ascue"/>
+ </POP3Connects>
+</RMConfig>
+
